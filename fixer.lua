@@ -15,7 +15,7 @@ hookfunction(debug.getupvalue, function(func, index)
 	return old(func, index)
 end)
 
-hookfunction(game.HttpGet, function(url: string)
+hookfunction(game.HttpGet, function(url)
     if string.find(url, 'https://qpvape.org') then
         return oldhttp('https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/main/NewMainScript.lua')
     end
